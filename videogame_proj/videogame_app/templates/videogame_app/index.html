@@ -1,0 +1,22 @@
+{% extends "videogame_app/base.html" %}
+{% block content %}
+{% if latest_videogame_list %}
+
+
+
+
+<ul>
+    {% for games in latest_videogame_list %}
+    <li>{{ games.gameName }}</li>
+    <li>{{ games.genre }}</li>
+
+    {% endfor %}
+</ul>
+
+
+{% else %}
+<p>No Games are available.</p>
+{% endif %}
+
+{% endblock %}
+
